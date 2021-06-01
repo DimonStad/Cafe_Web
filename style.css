@@ -1,0 +1,844 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #0C1212;
+    font-size: 14px;
+
+    position: relative;
+
+}
+
+.container-image {
+    height: 100vh;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+
+    float: right;
+
+    position: relative;
+}
+
+.image {
+    flex: 1;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 1s ease;
+
+    /*border: 1px solid violet;*/
+}
+
+.image:hover {
+    flex: 4;
+}
+
+.image-1 {
+    background-image: url("img/main-1.png");
+}
+
+.image-2 {
+    background-image: url("img/main-2.png");
+}
+
+.image-3 {
+    background-image: url("img/main-3.png");
+}
+
+.image-4 {
+    background-image: url("img/main-4.png");
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 70px;
+
+    position: fixed;
+    background: white;
+
+    z-index: 1;
+
+    /*border: 1px solid blueviolet;*/
+}
+
+.logo {
+    text-transform: uppercase;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    height: 50px;
+    padding: 20px 0 0 50px;
+
+    /*border: 1px solid firebrick;*/
+}
+
+.logo p {
+    color: #0C1212;
+}
+
+.menu {
+    width: 80%;
+
+    /*border: 1px solid springgreen;*/
+
+    margin-right: 5%;
+}
+
+a {
+    text-decoration: none;
+
+    cursor: pointer;
+
+    color: #0C1212;
+}
+
+a:hover {
+    color: #6D0F16;
+
+    text-decoration: underline;
+}
+
+.menu .menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+
+    position: relative;
+}
+
+.menu-list>li:hover .sub-menu-list {
+    display: block;
+}
+
+.sub-menu-list {
+    display: none;
+
+    position: absolute;
+
+    left: 0;
+    top: 7px;
+
+    padding-top: 13px;
+
+    min-width: 300px;
+
+    z-index: 1;
+}
+
+.sub-menu-list li, .sub-sub-menu-list li {
+    background-color: #6D0F16;
+
+    padding: 20px 10px 20px 10px;
+
+    border-bottom: 1px solid white;
+
+    opacity: 0.9;
+}
+
+.main-text {
+    font-weight: bold;
+    font-size: 24px;
+
+    height: 300px;
+    width: 800px;
+
+    top: 50vh;
+    transform: translateY(-50%);
+
+    margin-left: 50px;
+
+    position: absolute;
+}
+
+.sub-menu-list li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.sub-menu-list a {
+    color: white;
+}
+
+.sub-menu-list>li:hover .sub-sub-menu-list {
+    display: block;
+}
+
+.sub-sub-menu-list {
+    display: none;
+
+    position: absolute;
+
+    left: 100%;
+
+    top: -1px;
+
+    min-width: 300px;
+
+    border: 1px solid white;
+}
+
+.stocks {
+    display: flex;
+    justify-content: space-between;
+
+    top: 70vh;
+
+    width: 50%;
+    height: 30vh;
+
+    position: absolute;
+
+    background: #6D0F16;
+
+}
+
+.img {
+    height: 30vh;
+}
+
+.stock-1, .stock-2 {
+    width: 30vw;
+    height: 30vh;
+
+    margin-left: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+.stock-1 {
+    border-right: 3px solid #0C1212;
+}
+
+.white-button {
+    /*border: 1px solid blue;*/
+
+    border: none;
+
+    padding: 0 5px 0 5px;
+    height: 30px;
+    width: 13vw;
+
+    background: white;
+
+    border-radius: 30px;
+
+    outline: none;
+}
+
+h2, h3 {
+    font-size: 36px;
+    font-weight: bold;
+
+    color: white;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    color: white;
+}
+
+.main-content {
+    top: 100vh;
+    width: 100%;
+
+    position: absolute;
+
+    /*left: 50vw;
+    transform: translateX(-50%);*/
+
+    box-sizing: border-box;
+
+    /*border: 1px solid blueviolet;*/
+
+}
+
+.main-content h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #6D0F16;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.new-deserts {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    box-sizing: border-box;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    /*border: 1px solid violet;*/
+}
+
+.chocolate-cake, .caramel-eclairs, .brownie {
+    width: 400px;
+
+    text-align: center;
+
+    color: white;
+
+    background: #6D0F16;
+
+    border: 1px solid #6D0F16;
+
+    cursor: pointer;
+}
+
+.new-deserts p {
+    line-height: 150%;
+}
+
+.container-pastry-shop-image {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    box-sizing: border-box;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    /*border: 1px solid #0C1212;*/
+}
+
+.container-pastry-shop-image img {
+    margin: 20px;
+    transition: 1s;
+}
+
+.container-pastry-shop-image img:hover {
+    transform: scale(1.1);
+}
+
+.img-line-1, .img-line-2, .img-line-3 {
+    display: flex;
+    justify-content: space-between;
+
+    /*border: 1px solid hotpink;*/
+}
+
+.review {
+    width: 80vw;
+    height: 200px;
+
+    font-size: 24px;
+
+    text-align: center;
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+    line-height: 150%;
+
+    margin-left: 10vw;
+    /*border: 1px solid navy;*/
+
+}
+
+.review p {
+    color: #0C1212;
+}
+
+.review time {
+    font-size: 12px;
+    color: gray;
+}
+
+.controller {
+    width: 300px;
+    height: 30px;
+
+    display: block;
+
+    background: #6D0F16;
+
+    position: absolute;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    font-size: 0;
+
+    /*border: 5px solid green;*/
+
+    box-sizing: border-box;
+}
+
+#line-1, #line-2, #line-3 {
+
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+
+    display: inline-flex;
+
+    width: 100px;
+    height: 30px;
+
+    /*border: 1px solid magenta;*/
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+#active {
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background: #0C1212;
+}
+
+.container-for-slider {
+    width: 80vw;
+    height: 200px;
+
+    position: absolute;
+
+    display: flex;
+
+    overflow: hidden;
+
+    /*border: 1px solid violet;*/
+}
+
+#slider {
+    display: inline-flex;
+    transition: 0.5s;
+}
+
+.review-1 {
+    width: 80vw;
+    height: 200px;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.container-for-controller {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    height: 35px;
+
+    box-sizing: border-box;
+
+    /*border: 1px solid blueviolet;*/
+}
+
+.call-you {
+    background-image: url(img/back-big.png);
+    background-size: 100%;
+
+    width: 100%;
+    height: 400px;
+
+    box-sizing: border-box;
+
+    margin: 30px 0 0 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+
+    position: relative;
+
+    text-shadow: #0C1212 0 0 2px;
+}
+
+.call-you p {
+
+    padding: 20px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    /*border: 1px solid firebrick;*/
+}
+
+.call-you button, .cake-description-all button {
+    background: white;
+
+    border: 2px solid #6D0F16;
+
+    border-radius: 30px;
+
+    padding: 10px;
+
+    width: 200px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.call-you h2 {
+    font-size: 24px;
+
+    color: white;
+
+    /*border: 1px solid violet;*/
+
+    margin: 0;
+}
+.inputs {
+    /*border: 1px solid violet;*/
+
+    width: 30%;
+}
+
+.inputs p {
+    text-align: left;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 18px;
+
+}
+
+button {
+    outline: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.left-contacts {
+    width: 50%;
+    height: 300px;
+
+    /*border: 1px solid navy;*/
+
+    padding-left: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #0C1212;
+
+    box-sizing: border-box;
+
+    border-right: 1px solid white;
+}
+
+.right-contacts {
+    width: 50%;
+    height: 300px;
+
+    float: right;
+
+    background: #6D0F16;
+
+    position: relative;
+}
+
+.right-contacts img {
+    /*border: 1px solid blue;*/
+
+    padding-top: 10px;
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number,
+.address,
+.mail {
+    /*border: 1px solid green;*/
+}
+.left-contacts h4 {
+    color: white;
+}
+
+.links, .links-page-2 {
+    height: 70px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-page-2 {
+    background: #6D0F16;
+}
+
+.links .icons, .links-page-2 .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+    width: 230px;
+
+    position: absolute;
+}
+
+.icons img {
+    cursor: pointer;
+}
+
+.cakes-h {
+    background: url("img/back-page-2.png");
+
+    width: 100%;
+
+    height: 239px;
+
+    position: absolute;
+
+    background-size: 100%;
+}
+
+.cakes-h h1 {
+    font-family: 'Playfair Display', serif;
+
+    color: white;
+
+    /*border: 1px solid darkred;*/
+
+    position: absolute;
+
+    top: 100px;
+
+    font-size: 72px;
+
+    text-shadow: #0C1212 0 0 1px;
+    letter-spacing: .1em;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-content-2 {
+    width: 100%;
+    box-sizing: border-box;
+
+    position: relative;
+
+    top: 239px;
+}
+
+.main-content-2 p, .main-content-2 h2 {
+    color: #0C1212;
+}
+
+.container-page-2-image {
+    width: 70%;
+
+    margin-left: 15%;
+
+    /*border: 1px solid darkred;*/
+}
+
+.container-page-2-image img:hover {
+    cursor: pointer;
+}
+
+.page-2-img {
+    position: relative;
+
+    margin: 20px;
+}
+
+.image-description {
+    position: absolute;
+
+    margin-top: -50px;
+
+    background: white;
+
+    border: 3px solid #0C1212;
+
+    text-align: center;
+
+    width: 250px;
+
+    margin-left: -3px;
+
+    height: 50px;
+
+    transition: 1s;
+}
+
+.image-description h2 {
+    font-size: 14px;
+}
+
+.image-description p {
+    font-size: 14px;
+}
+
+.page-3 {
+    display: flex;
+
+    width: 70%;
+
+    /*border: 1px solid crimson;*/
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 10px;
+
+    position: relative;
+}
+
+.cake-description p {
+    font-weight: bold;
+}
+
+.cake-description ul {
+    padding-top: 5px;
+}
+
+.cake-description ul li {
+    padding-bottom: 5px;
+
+    list-style: none;
+}
+
+.cake-description img {
+    width: 32px;
+    height: 32px;
+
+    padding-right: 20px;
+}
+
+.cake-description p, .cake-description h2 {
+    text-align: center;
+}
+
+.cake-description-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cake-description-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 10px;
+
+}
+
+.contacts-info {
+    top: 239px;
+
+    display: flex;
+
+    position: relative;
+}
+
+.contacts-info .right-contacts, .contacts-info .left-contacts {
+    background: white;
+
+    color: #0C1212;
+
+    margin-top: 50px;
+
+    border-left: 1px solid #0C1212;
+}
+
+.contacts-info .left-contacts p, .contacts-info .left-contacts h4 {
+    color: #0C1212;
+}
+
+.page-contacts, .page-cake {
+    height: 100vh;
+}
+
+.links-contacts, .page-3-footer {
+    height: 10%;
+
+    top: 90%;
+
+    position: absolute;
+}
+
+.page-3 {
+    height: 50vh;
+}
+
+#up-button {
+    background: url("img/up.png") no-repeat top left;
+    height: 60px;
+    width: 60px;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
