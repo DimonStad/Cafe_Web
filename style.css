@@ -1,3 +1,5 @@
+@import'simpebar.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -832,6 +834,178 @@ button {
     position: fixed;
     z-index: 999;
 }
+
+.btn {
+    border: none;
+    padding: 14px 0;
+    border-radius: 4px;
+    color: #black; 
+    background-color: var(--color-accent);
+    cursor: pointer;
+    transition: background color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #6078f1;
+    transition: background color 0.3s ease-in-out;
+}
+
+.header {
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cart_text{
+
+}
+
+.cart{
+    position: relative;
+    padding: 26px 30px;
+    margin-right: 100px;
+}
+
+.cart.active:hover {
+    cursor: pointer;
+    background: rgba(93, 113, 221, 0.1);
+    transition: background-color 0.3s;
+}
+
+.cart_quantity{
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background-color: #de707b;
+    border-radius: 100%;
+    padding: 2px;
+    min-height: 16px;
+    min-width: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-content {
+    cursor: default;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 490;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(135, 135, 135, 0.25);
+    /*opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;*/
+}
+
+.cart.active:hover .cart-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.cart-content_list{
+    max-height: 330pxS;
+}
+
+.content {
+    padding-top: 90px;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    padding-right: 13px;
+    transition: background-color 0.3s;
+}
+
+.cart-product:hover {
+    background: rgba(93, 113, 221, 0.1);
+    transition: background-color 0.3s;
+}
+
+.cart-product_img{
+    max=width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-product_title{
+    max-width: 280px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4D4D4D;
+}
+
+
+.cart-product_price{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4D4D4D;
+}
+
+.cart-product_delete{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(".../img/tg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+}
+
+.cart-content_bottom{
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.cart-content_fullprice {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4D4D4D ;
+    margin-right: 15px;
+}
+
+.fullprice {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4D4D4D;
+
+}
+
+.cart-content_btn{
+    width: 246px;
+    text-align: center;
+}
+
 
 
 
