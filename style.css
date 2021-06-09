@@ -1,4 +1,6 @@
-@import'simpebar.css';
+@import 'products-grid.css';
+@import 'simplebar.css';
+@import 'product.css';
 
 * {
     margin: 0;
@@ -871,12 +873,17 @@ button {
     position: relative;
     padding: 26px 30px;
     margin-right: 100px;
+    transition: background-color 0.3s;
 }
 
 .cart.active:hover {
     cursor: pointer;
     background: rgba(93, 113, 221, 0.1);
     transition: background-color 0.3s;
+}
+
+.header_cart {
+    margin-left: 40px;
 }
 
 .cart_quantity{
@@ -906,6 +913,8 @@ button {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    
 }
 
 .cart.active:hover .cart-content {
@@ -915,7 +924,7 @@ button {
 }
 
 .cart-content_list{
-    max-height: 330pxS;
+    max-height: 330px;
 }
 
 .content {
@@ -1013,6 +1022,25 @@ button {
     text-align: center;
 }
 
+.simplebar-track.simplebar-vertical {
+    width: 4px;
+    background: rgba(77, 77, 77, 0.1);
+    border-radius: 5px;
+    right: 5px;
+    margin-top: 20px;
+    height: calc(100% - 40px);
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+    background: rgba(77, 77, 77, 0.2);
+    border-radius: 5px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
 
 
 

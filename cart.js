@@ -1,4 +1,4 @@
-const productsBtn = document.querySelectorAll('.product_btn');
+const productsBtn = document.querySelectorAll('.product__btn');
 const cartProductsList = document.querySelector('.cart-content_list');
 const cart = document.querySelector('.cart');
 const cartQuantity = cart.querySelector('.cart_quantity');
@@ -41,7 +41,7 @@ const generateCartProduct = (img, title, price, id) => {
 			<article class="cart-content_product cart-product" data-id="${id}">
 				<img src="${img}" alt="" class="cart-product_img">
 				<div class="cart-product_text">
-					<h3 class="cart-product__title">${title}</h3>
+					<h3 class="cart-product_title">${title}</h3>
 					<span class="cart-product_price">${normalPrice(price)}</span>
 				</div>
 				<button class="cart-product_delete" aria-label="Удалить товар"></button>
@@ -52,7 +52,7 @@ const generateCartProduct = (img, title, price, id) => {
 
 const deleteProducts = (productParent) => {
 	let id = productParent.querySelector('.cart-product').dataset.id;
-	document.querySelector(`.product[data-id="${id}"]`).querySelector('.product_btn').disabled = false;
+	document.querySelector(`.product[data-id="${id}"]`).querySelector('.product__btn').disabled = false;
 	
 	let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector('.cart-product_price').textContent));
 	minusFullPrice(currentPrice);
@@ -69,13 +69,13 @@ productsBtn.forEach(el => {
 		let self = e.currentTarget;
 		let parent = self.closest('.product');
 		let id = parent.dataset.id;
-		let img = parent.querySelector('.image-switch_img img').getAttribute('src');
-		let title = parent.querySelector('.product_title').textContent;
-		let priceString = priceWithoutSpaces(parent.querySelector('.product-price_current').textContent);
-		let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-price_current').textContent));
+		let img = parent.querySelector('.image-switch__img img').getAttribute('src');
+		let title = parent.querySelector('.product__title').textContent;
+		let priceString = priceWithoutSpaces(parent.querySelector('.product-price__current').textContent);
+		let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-price__current').textContent));
 
 		plusFullPrice(priceNumber);
-		
+
 		printFullPrice();
 
 		cartProductsList.querySelector('.simplebar-content').insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceString, id));
