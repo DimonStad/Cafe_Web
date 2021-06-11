@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>ПОДУШКА</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="libs/modal/modal.css">
+    <link rel="stylesheet" href="global.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 </head>
@@ -81,50 +83,20 @@
         </ul>
 
     </nav>
-    <div class="header_cart cart active" tabindex="0">
-            <div class="cart_text">
+    <div class="header__cart cart active" tabindex="0">
+            <div class="cart__text">
                 КОРЗИНА
-                <span class="cart_quantity">0</span>
+                <span class="cart__quantity">0</span>
             </div>
              <div class="cart-content">
-                 <ul class="cart-content_list" data-simplebar>
-                     <li class="cart-content_item">
-                         <article class="cart-content_product cart-product">
-                             <img src="img/wedding-2.png" alt="Меню" class="cart-product_img">
-                             <div class="cart-product_text">
-                                 <h3 class="cart-product_title">СВАДЕБНЫЙ ТОРТ №1</h3>
-                                 <span class="cart-product_price">10 000 рублей</span>
-                             </div> 
-                             <button class="cart-product_delete" aria-label="Удалить товар">×</button>
-                         </article>
-                     </li>
-                     <li class="cart-content_item">
-                         <article class="cart-content_product cart-product">
-                             <img src="img/wedding-2.png" alt="Меню" class="cart-product_img">
-                             <div class="cart-product_text">
-                                 <h3 class="cart-product_title">СВАДЕБНЫЙ ТОРТ №1</h3>
-                                 <span class="cart-product_price">10 000 рублей</span>
-                             </div> 
-                             <button class="cart-product_delete" aria-label="Удалить товар">×</button>
-                         </article>
-                     </li>
-                     <li class="cart-content_item">
-                         <article class="cart-content_product cart-product">
-                             <img src="img/wedding-2.png" alt="Меню" class="cart-product_img">
-                             <div class="cart-product_text">
-                                 <h3 class="cart-product_title">СВАДЕБНЫЙ ТОРТ №1</h3>
-                                 <span class="cart-product_price">10 000 рублей</span>
-                             </div> 
-                             <button class="cart-product_delete" aria-label="Удалить товар">×</button>
-                         </article>
-                     </li>
+                 <ul class="cart-content__list" data-simplebar>
                  </ul>
-                 <div class="cart-content_bottom">
-                     <div class="cart-content_fullprice">
+                 <div class="cart-content__bottom">
+                     <div class="cart-content__fullprice">
                          <span>Итого</span>
-                         <span class="fullprice">10 000 рублей</span>
+                         <span class="fullprice"></span>
                      </div>
-                     <button class="cart-content_btn btn">Перейти в корзину</button>
+                     <button class="cart-content__btn btn" data-graph-path="modal" data-graph-animation="fadeInUp">Перейти в корзину</button>
                  </div>
              </div>
         </div>
@@ -225,6 +197,7 @@
                 <div class="inputs">
                     <p>Ваше имя:<input id="nameInput" type="text"></p>
                     <p>Ваше номер телефона:<input id="numberInput" type="text"></p>
+                    
                 </div>
                 <button id="applicationButton">Оставить заявку</button>
                 <p>Вы можете также написать свой вопрос на почту</p>
@@ -257,6 +230,53 @@
                 </div>
             </div>
         </div>
+        <div class="modal">
+        <div class="modal__container order-modal" role="dialog" aria-modal="true" data-graph-target="modal">
+            <div class="modal-content order-modal__content">
+                <div class="order-modal__top">
+                    <h2 class="order-modal__title">Оформление заказа</h2>
+                    <span class="order-modal__number">Заказ № 3456 67</span>
+                </div>
+                <div class="order-modal__info">
+                    <div class="order-modal__quantity order-modal__info-item">Товаров в заказе: <span>3 шт</span></div>
+                    <div class="order-modal__summ order-modal__info-item">Общая сумма заказа: <span>568 789 ₽</span></div>
+                    <div class="order-modal__products order-modal__info-item">
+                        <button class="order-modal__btn">Состав заказа</button>
+                        <ul class="order-modal__list">
+                            <!-- <li class="order-modal__item">
+                                <article class="order-modal__product order-product">
+                                    <img src="img/macbook.jpg" alt="" class="order-product__img">
+                                    <div class="order-product__text">
+                                        <h3 class="order-product__title">Ноутбук Apple MacBook Pro 16 TB i7 2.6/16/512 SSD SG MVVJ2RU/A</h3>
+                                        <span class="order-product__price">190 789 ₽ </span>
+                                    </div>
+                                    <button class="order-product__delete">Удалить</button>
+                                </article>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <form action="#" class="order-modal__form order">
+                    <input type="hidden" name="theme" value="Обратный звонок">
+                    <input type="hidden" name="admin_email[]" value="maxgraph23@gmail.com">
+                    <input type="hidden" name="form_subject" value="Заявка с сайта Сайт">
+                    <label class="order__label">
+                        <span class="order__text">Ваше имя</span>
+                        <input type="text" name="Имя" class="order__input">
+                    </label>
+                    <label class="order__label">
+                        <span class="order__text">Номер телефона</span>
+                        <input type="tel" name="Телефон" class="order__input" placeholder="+7 (___)___-__-__">
+                    </label>
+                    <label class="order__label">
+                        <span class="order__text">Ваш email</span>
+                        <input type="email" name="Email" class="order__input" placeholder="post@gmail.com">
+                    </label>
+                    <button class="order__btn btn">Оформить заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
 <script>
     let slider = document.getElementById("slider");
     let active = document.getElementById("active");
@@ -280,6 +300,7 @@
     </script>
 <script src="script.js" async></script>
 <script src="simplebar.js"></script>
+<script src="libs/modal/modal.js"></script>
 <script src="cart.js"></script>
 </body>
 </html>

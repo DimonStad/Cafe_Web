@@ -19,7 +19,7 @@ ul {
 
 @font-face {
 	font-family: 'Noto Sans';
-	src: url('../fonts/NotoSansRegular.woff2') format('woff2');
+	/*src: url('C:/Users/Элемент/Desktop/Cafe/fonts/fonts/NotoSansRegular.woff2') format('woff2');*/
 	font-display: swap;
 	font-weight: 400;
 	font-style: normal;
@@ -27,7 +27,7 @@ ul {
 
 @font-face {
 	font-family: 'Noto Sans';
-	src: url('../fonts/NotoSansSemiBold.woff2') format('woff2');
+	src: url('C:/Users/Элемент/Desktop/Cafe/fonts/NotoSansSemiBold.woff2') format('woff2');
 	font-display: swap;
 	font-weight: 600;
 	font-style: normal;
@@ -63,8 +63,8 @@ ul {
 	max-width: 1234px; 
 	width: 1244px;
 	padding: 0 var(--gutter);
-	margin-top: 320px;
-	margin-left: 500px;
+	margin-top: 15%;
+	margin-left: 26%;
 }
 
 .grid-container {
@@ -96,5 +96,5 @@ ul {
 }
 
 .height {
-	height: 300px;
+	height: 110px;
 }
